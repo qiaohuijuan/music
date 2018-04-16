@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <i class='iconfont icon-fenxiang'></i>
+            <p><i class='iconfont icon-fangdajing'></i><input type="text" placeholder="给你推荐 菩提叶"></p>
+            <i class='iconfont icon-gongzuo'></i>
+        </header>
+        <section>
+            <ul class='nav'>
+                <li class='bt'>音乐</li>
+                <li>视频</li>
+                <li>电台</li>
+            </ul>
+            <div class='main'>
+                <div style='display:block' class='first'>
+                    <div class="swiper-container banner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="imgs/1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="imgs/2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="imgs/3.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class='song'>
+                        <h1>推荐歌单 ></h1>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt><img src="imgs/1.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="imgs/2.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="imgs/3.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="imgs/1.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="imgs/2.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="imgs/3.png" alt=""></dt>
+                                    <dd>[春日偷懒漫游指南]</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style='background:yellow'>
+                    视频
+                </div>
+                <div style='background:blue'>
+                    电台
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <ol class='footer'>
+                <li class='bg'><i class="iconfont icon-shouye"></i>发现音乐</li>
+                <li><i class="iconfont icon-youku"></i>我的音乐</li>
+                <li><i class="iconfont icon-tianbiao"></i>朋友</li>
+                <li><i class="iconfont icon-wode"></i>账号</li>
+            </ol>
+        </footer>
+
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script>
+        new Swiper('.banner', {
+            autoplay: 1000,
+            loop: true
+        });
+        //tab切换
+        $('.nav').on('click', 'li', function() {
+            var i = $(this).index();
+            $('.main>div').eq(i).show().siblings().hide();
+        });
+        //tab切换
+        $('.footer').on('click', 'li', function() {
+            $(this).addClass('bg').siblings().removeClass('bg');
+        })
+    </script>
+</body>
+
+</html>
